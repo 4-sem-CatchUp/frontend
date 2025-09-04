@@ -1,1 +1,3 @@
-# frontend
+# CatchUp Frontend
+
+Bo og Burak
