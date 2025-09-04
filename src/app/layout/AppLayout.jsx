@@ -5,10 +5,10 @@ import GlobalFooter from "./GlobalFooter";
 
 export default function AppLayout() {
   return (
-    <div className="app">
+    <div>
       <GlobalHeader />
       <main>
-        <Outlet /> {/* this is where the page gets injected */}
+        <Outlet />
       </main>
       <GlobalFooter />
     </div>
