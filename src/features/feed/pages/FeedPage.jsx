@@ -2,6 +2,6 @@ import React from "react";
 
 export default function FeedPage() {
   return (
-    <p>Hej Feedpage</p>
+    <p>THIS IS A FEED PAGE</p>
   );
 }

@@ -2,6 +2,6 @@ import React from "react";
 
 export default function ProfilePage() {
   return (
-    <p>Hej profilepage</p>
+    <p>THIS IS A PROFILE PAGE</p>
   );
 }

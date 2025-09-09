@@ -1,4 +1,4 @@
 import React from "react";
 export default function GlobalFooter() {
-  return <footer>Footer</footer>;
+  return <h1>THIS IS A FOOTER</h1>;
 }

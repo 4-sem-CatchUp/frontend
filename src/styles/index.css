@@ -1,1 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+@layer base {
+  body {
+    @apply bg-stone-50 dark:bg-gray-900;
+  }
+  h1 {
+    @apply text-sky-500 font-heading text-4xl font-bold;
+  }
+  h2 {
+    @apply text-sky-500 font-heading text-3xl font-semibold;
+  }
+  p {
+    @apply font-sans text-gray-900 dark:text-stone-50 text-lg leading-relaxed;
+  }
+  .highlight {
+    @apply text-violet-500 dark:text-pink-400;
+  }
+}
