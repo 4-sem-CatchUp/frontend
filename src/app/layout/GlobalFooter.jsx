@@ -1,6 +1,4 @@
 import React from "react";
-import GradientDivider from "../../components/ui/FooterTopDivider";
-import { Github } from "lucide-react";
 
 export default function GlobalFooter() {
   const year = new Date().getFullYear();
@@ -30,22 +28,7 @@ export default function GlobalFooter() {
             </li>
             <li>
               <a href="/help" className="hover:text-sky-500 transition">
-                Help / FAQ
-              </a>
-            </li>
-            <li>
-              <a href="/guidelines" className="hover:text-sky-500 transition">
-                Community Guidelines
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" className="hover:text-sky-500 transition">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="/terms" className="hover:text-sky-500 transition">
-                Terms of Service
+                FAQ
               </a>
             </li>
             <li>
@@ -55,7 +38,7 @@ export default function GlobalFooter() {
             </li>
             <li>
               <a
-                href="https://github.com/yourrepo"
+                href="https://github.com/4-sem-CatchUp/frontend"
                 className="hover:text-sky-500 transition"
               >
                 GitHub
