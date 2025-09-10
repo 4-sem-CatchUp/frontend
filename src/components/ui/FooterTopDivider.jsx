@@ -1,0 +1,16 @@
+import React from "react";
+import { Share2 } from "lucide-react";
+
+export default function GradientDivider() {
+  return (
+    <span className="flex items-center my-8">
+      <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-600"></span>
+
+      <span className="shrink-0 px-4 text-gray-900 dark:text-white translate-y-[1px]">
+        <Share2 className="w-5 h-5" />
+      </span>
+
+      <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300 dark:to-gray-600"></span>
+    </span>
+  );
+}
