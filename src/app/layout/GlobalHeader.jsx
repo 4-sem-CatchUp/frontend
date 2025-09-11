@@ -12,8 +12,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function GlobalHeader() {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-sky-500 dark:text-stone-50">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 border-b-[0.5px]">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto text-sky-500 dark:text-stone-50">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <FontAwesomeIcon icon={faOtter} className="h-6 w-6" />
           <span className="self-center whitespace-nowrap dark:text-stone-50 text-sm">
