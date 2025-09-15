@@ -9,7 +9,9 @@ export default function GlobalFooter() {
     <footer className="bg-stone-50 dark:bg-gray-900">
 
       {/* Divider med 1px og fade i begge sider: */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
+      {/* <div className="h-px w-full bg-gradient-to-r from-gray-300 via-gray-300 to-gray-300 dark:via-gray-600" /> */}
+      <div className="h-px w-full bg-[linear-gradient(to_right,theme(colors.gray.300),theme(colors.gray.300))] dark:bg-[linear-gradient(to_right,theme(colors.gray.600),theme(colors.gray.600))]" />
+
 
       <div className="mx-auto max-w-screen-xl py-10">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">

@@ -127,7 +127,7 @@ export default function GlobalHeader() {
           </ul>
         </div>
       </div>
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600" />
+      <div className="h-px w-full bg-[linear-gradient(to_right,theme(colors.gray.300),theme(colors.gray.300))] dark:bg-[linear-gradient(to_right,theme(colors.gray.600),theme(colors.gray.600))]" />
     </nav>
 
     // <div className="flex flex-wrap sm:flex-nowrap gap-2 p-2 bg-gray-900">
