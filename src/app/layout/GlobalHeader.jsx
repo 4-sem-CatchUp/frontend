@@ -14,9 +14,12 @@ export default function GlobalHeader() {
   return (
     <nav className="bg-white dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto text-sky-500 dark:text-stone-50 pt-4 pb-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse text-3xl">
-          <FontAwesomeIcon icon={faOtter} className="h-6 w-6" />
-          <span className="self-center whitespace-nowrap dark:text-stone-50 text-3xl font-bold font-heading">
+        <a
+          href="/"
+          className="flex items-center ml-4 space-x-3 rtl:space-x-reverse text-3xl"
+        >
+          <FontAwesomeIcon icon={faOtter} className="text-sm xl:text-3xl" />
+          <span className="self-center whitespace-nowrap dark:text-stone-50 text-sm xl:text-3xl font-bold font-heading">
             CatchUp
           </span>
         </a>
@@ -47,13 +50,13 @@ export default function GlobalHeader() {
                 icon={faMagnifyingGlass}
                 viewBox="0 0 20 20"
                 aria-hidden="true"
-                className="h-5 w-5 text-gray-900 dark:text-stone-50"
+                className="md:text-xs text-gray-900 dark:text-stone-50"
               />
             </div>
             <input
               type="text"
               id="search-navbar"
-              className="block w-full  p-2 ps-10 text-sm outline-none text-gray-900 border-[0.5px] border-gray-500 rounded-sm bg-gray-50 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-stone-50 placeholder:text-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block w-full  p-2 ps-10 text-sm outline-none text-gray-900 border-[0.5px] border-gray-500 rounded-sm bg-gray-50 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-stone-50 placeholder:text-gray-900 md:placeholder:text-xs dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search..."
             />
           </div>
@@ -71,7 +74,7 @@ export default function GlobalHeader() {
               icon={faBars}
               aria-hidden="true"
               viewBox="0 0 17 14"
-              className="w-5 h-5 text-gray-900 dark:text-stone-50"
+              className="text-xs text-gray-900 dark:text-stone-50"
             />
           </button>
         </div>
@@ -98,11 +101,11 @@ export default function GlobalHeader() {
               placeholder="Search..."
             />
           </div>
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col text-sm xl:text-md p-4 md:p-0 mt-4 mr-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-gray-900 text-md rounded-sm md:bg-transparent md:p-0 dark:text-stone-50  md:hover:text-sky-500 dark:md:hover:text-sky-500  aria-[current=page]:text-sky-500"
+                className="block py-2 px-3 text-gray-900 rounded-sm md:bg-transparent md:p-0 dark:text-stone-50  md:hover:text-sky-500 dark:md:hover:text-sky-500  aria-[current=page]:text-sky-500"
                 aria-current="page"
               >
                 Feed
