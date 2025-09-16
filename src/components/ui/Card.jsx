@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProfileCard({ title, children }) {
+export default function Card({ title, children }) {
   return (
     <div className="relative overflow-hidden rounded-md border border-gray-900 dark:border-gray-300/25 dark:bg-gray-900 bg-stone-50 shadow-sm">
       <div className="bg-gray-800 p-3 pt-2 pb-2">

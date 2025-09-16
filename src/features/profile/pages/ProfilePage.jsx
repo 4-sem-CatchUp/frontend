@@ -4,7 +4,7 @@ import ProfileAchievements from "../components/ProfileAchievements";
 import ProfileComments from "../components/ProfileComments";
 import ProfileActivity from "../components/ProfileActivity";
 import ProfileHeader from "../components/ProfileHeader";
-import ProfileSidebar from "../components/ProfileSidebar";
+import Sidebar from "../../../components/sidebar/Sidebar";
 
 export default function ProfilePage() {
   return (
@@ -23,7 +23,7 @@ export default function ProfilePage() {
 
           {/* 25% sidebar */}
           <aside className="md:col-span-1">
-            <ProfileSidebar />
+            <Sidebar />
           </aside>
         </section>
       </div>
