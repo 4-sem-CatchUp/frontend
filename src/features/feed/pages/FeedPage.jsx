@@ -11,7 +11,11 @@ export default function FeedPage() {
         <section className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* 75% column */}
           <div className="md:col-span-3 space-y-6">
-            <FeedCard />
+            <FeedCard postTitle={"Hej jeg er en titel"}>
+              Hej, jeg er et feedtekst. Jeg stinker af nums og tis.Hej, jeg er
+              et feedtekst. Jeg stinker af nums og tis.Hej, jeg er et feedtekst.
+              Jeg stinker af nums og tis.Hej, jeg er et feedtekst.
+            </FeedCard>
           </div>
 
           {/* 25% sidebar */}
