@@ -1,10 +1,10 @@
 import React from "react";
-import ProfileCard from "./ProfileCard";
+import Card from "../../../components/ui/Card";
 
 export default function ProfileAchievements() {
   return (
-    <ProfileCard title="Achievements">
+    <Card title="Achievements">
       List of earned achievements, and maybe currently ongoing ones?
-    </ProfileCard>
+    </Card>
   );
 }
