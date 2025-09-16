@@ -7,7 +7,6 @@ import SidebarFriends from "./SidebarFriends";
 export default function Sidebar() {
   return (
     <div className="space-y-6">
-      <SidebarAchievements />
       <SidebarFriends />
       <SidebarSubbedGroups />
     </div>

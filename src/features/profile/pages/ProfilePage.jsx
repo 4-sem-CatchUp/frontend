@@ -1,5 +1,9 @@
 import React from "react";
 
+import EditProfileButton from "../../../components/ui/DefaultButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faMedal } from "@fortawesome/free-solid-svg-icons";
+
 import ProfileAchievements from "../components/ProfileAchievements";
 import ProfileComments from "../components/ProfileComments";
 import ProfileActivity from "../components/ProfileActivity";
@@ -12,12 +16,13 @@ export default function ProfilePage() {
       <div className="mx-auto max-w-screen-xl py-10">
         {/* PROFILE HEADER */}
         <ProfileHeader />
+
         {/* MAIN GRID: 75 / 25 split on md+ */}
         <section className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* 75% column */}
           <div className="md:col-span-3 space-y-6">
-            <ProfileAchievements />
             <ProfileActivity />
+            <ProfileAchievements />
             <ProfileComments />
           </div>
 

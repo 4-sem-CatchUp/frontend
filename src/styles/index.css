@@ -15,6 +15,9 @@
   h2 {
     @apply text-sky-500 font-heading text-3xl font-semibold;
   }
+  h3 {
+    @apply text-sky-500 font-heading text-2xl font-semibold;
+  }
   p {
     @apply font-sans text-gray-900 dark:text-stone-50 text-lg leading-relaxed;
   }
