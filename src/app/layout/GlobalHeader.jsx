@@ -56,7 +56,7 @@ export default function GlobalHeader() {
             <input
               type="text"
               id="search-navbar"
-              className="block w-full  p-2 ps-10 text-sm outline-none text-gray-900 border-[0.5px] border-gray-500 rounded-sm bg-gray-50 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-stone-50 placeholder:text-gray-900 md:placeholder:text-xs dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block w-full  p-2 ps-10 text-sm outline-none text-gray-900 border-[0.5px] border-gray-500 rounded-sm bg-gray-50 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-800 dark:border-stone-50 placeholder:text-gray-900 md:placeholder:text-xs dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search..."
             />
           </div>
