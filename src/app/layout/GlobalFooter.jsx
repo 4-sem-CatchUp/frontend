@@ -18,10 +18,10 @@ export default function GlobalFooter() {
           {/* Left side: logo + catchup name */}
           <div className="flex items-center space-x-3">
             {/* Placeholder logo */}
-            <div className="flex items-center justify-center font-bold text-3xl text-stone-50">
+            <div className="flex items-center justify-center font-bold text-3xl text-sky-500 dark:text-stone-50">
               <FontAwesomeIcon icon={faOtter} className="h-6 w-6" />
             </div>
-            <span className="text-3xl font-bold font-heading text-gray-900 dark:text-stone-50">
+            <span className="text-3xl font-bold font-heading text-sky-500 dark:text-stone-50">
               CatchUp
             </span>
           </div>
