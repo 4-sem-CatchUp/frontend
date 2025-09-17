@@ -9,7 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1",
@@ -25,6 +30,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -35,7 +42,10 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "jsdom": "^27.0.0",
     "prettier": "^3.6.2",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
   }
 }
