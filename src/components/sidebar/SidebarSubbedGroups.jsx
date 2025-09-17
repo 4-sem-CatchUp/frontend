@@ -1,5 +1,5 @@
-import React from "react";
-import Card from "../ui/Card";
+import React from 'react';
+import Card from '../ui/Card';
 
 export default function SidebarSubbedGroups() {
   return (

@@ -1,14 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import EditProfileButton from "../../../components/ui/DefaultButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faMedal } from "@fortawesome/free-solid-svg-icons";
+import ProfileAchievements from '../components/ProfileAchievements';
+import ProfileComments from '../components/ProfileComments';
+import ProfileActivity from '../components/ProfileActivity';
+import ProfileHeader from '../components/ProfileHeader';
+import Sidebar from '../../../components/sidebar/Sidebar';
 
-import ProfileAchievements from "../components/ProfileAchievements";
-import ProfileComments from "../components/ProfileComments";
-import ProfileActivity from "../components/ProfileActivity";
-import ProfileHeader from "../components/ProfileHeader";
-import Sidebar from "../../../components/sidebar/Sidebar";
+/**
+ * ProfilePage component
+ *
+ * Renders the main profile page layout.
+ * Includes:
+ * - ProfileHeader at the top
+ * - Main grid with ProfileActivity, Achievements, and Comments
+ * - Sidebar on the right (on medium+ screens)
+ *
+ * Layout is responsive: single column on mobile, 3/1 split on larger screens.
+ */
 
 export default function ProfilePage() {
   return (

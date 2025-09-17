@@ -1,4 +1,18 @@
-import React from "react";
+import React from 'react';
+
+/**
+ * Card component
+ *
+ * Generic container component with a header and content area.
+ * Props:
+ * - title: string shown in the header
+ * - icon: optional element displayed next to the title
+ * - children: main content rendered inside the card body
+ *
+ * Styling:
+ * - Rounded border and subtle shadow
+ * - Dark mode and light mode background handling
+ */
 
 export default function Card({ title, children, icon }) {
   return (
