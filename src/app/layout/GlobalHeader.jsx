@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faOtter } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+// import { faGithub } from '@fortawesome/free-brands-svg-icons';
 // import { faHouse } from '@fortawesome/free-solid-svg-icons';
 // import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 // import { faUser } from '@fortawesome/free-solid-svg-icons';
