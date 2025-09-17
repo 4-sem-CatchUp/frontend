@@ -3,6 +3,19 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faOtter } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * GlobalFooter component
+ *
+ * Displays the application’s footer with branding and navigation links.
+ * Layout:
+ * - Top divider line with light/dark theme support
+ * - First row: logo + app name (left), nav links (right)
+ * - Second row: dark/light mode toggle (left), “Made with React” note (center),
+ *   copyright with current year (right)
+ *
+ * Responsive: stacks vertically on small screens, switches to row layout on larger screens.
+ */
+
 export default function GlobalFooter() {
   const year = new Date().getFullYear();
   return (

@@ -10,14 +10,30 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 // import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 // import { faUser } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * GlobalHeader component
+ *
+ * Application-wide navigation bar.
+ * Layout:
+ * - Left: logo and app name (CatchUp)
+ * - Center/right: search input (desktop) and collapsible menu (mobile)
+ * - Nav links for Feed, Subs, and Profile
+ *
+ * Responsive behavior:
+ * - On desktop: inline search input and nav links visible
+ * - On mobile: search and nav items move into a collapsible menu
+ * - Includes mobile controls (search + hamburger menu button)
+ *
+ * Styling:
+ * - Light/dark theme with Tailwind classes
+ * - Divider line below the header for visual separation
+ */
+
 export default function GlobalHeader() {
   return (
     <nav className="bg-white dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto text-sky-500 dark:text-stone-50 pt-4 pb-4">
-        <a
-          href="/"
-          className="flex items-center ml-4 space-x-3 rtl:space-x-reverse text-3xl"
-        >
+        <a href="/" className="flex items-center ml-4 space-x-3 rtl:space-x-reverse text-3xl">
           <FontAwesomeIcon icon={faOtter} className="text-sm xl:text-3xl" />
           <span className="self-center whitespace-nowrap dark:text-stone-50 text-sm xl:text-3xl font-bold font-heading">
             CatchUp
@@ -80,10 +96,7 @@ export default function GlobalHeader() {
         </div>
 
         {/* Collapible section */}
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-search"
-        >
+        <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
           {/* Mobile - search input inside the menu */}
           <div className="relative mt-3 md:hidden">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">

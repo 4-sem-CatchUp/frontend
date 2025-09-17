@@ -1,13 +1,21 @@
 import DefaultButton from '../../../components/ui/DefaultButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faUser,
-  faMedal,
-  faCircle,
-  faGear,
-  faComments,
-} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faMedal, faCircle, faGear, faComments } from '@fortawesome/free-solid-svg-icons';
 import Card from '../../../components/ui/Card';
+
+/**
+ * ProfileHeader component
+ *
+ * Displays the top section of a user’s profile.
+ * Includes:
+ * - User avatar placeholder (large icon)
+ * - Quick bio text
+ * - Rank with medal icon
+ * - Action buttons (Edit Profile, Message)
+ *
+ * Wrapped in a Card component for consistent styling.
+ * Responsive layout: grid adapts between single and multi-column.
+ */
 
 export default function ProfileHeader() {
   return (
@@ -28,19 +36,10 @@ export default function ProfileHeader() {
         <div className="md:col-span-1 space-y-3">
           <h1 className="text-xl md:text-2xl font-semibold">
             Rank 32
-            <FontAwesomeIcon
-              icon={faMedal}
-              className="inline-block ml-1 text-yellow-500"
-            />
+            <FontAwesomeIcon icon={faMedal} className="inline-block ml-1 text-yellow-500" />
           </h1>
-          <DefaultButton
-            text="Edit Profile"
-            icon={<FontAwesomeIcon icon={faGear} size="xs" />}
-          />
-          <DefaultButton
-            text="Message"
-            icon={<FontAwesomeIcon icon={faComments} size="xs" />}
-          />
+          <DefaultButton text="Edit Profile" icon={<FontAwesomeIcon icon={faGear} size="xs" />} />
+          <DefaultButton text="Message" icon={<FontAwesomeIcon icon={faComments} size="xs" />} />
         </div>
       </section>
     </Card>
