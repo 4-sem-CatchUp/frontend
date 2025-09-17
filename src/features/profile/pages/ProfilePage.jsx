@@ -1,14 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import EditProfileButton from "../../../components/ui/DefaultButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faMedal } from "@fortawesome/free-solid-svg-icons";
-
-import ProfileAchievements from "../components/ProfileAchievements";
-import ProfileComments from "../components/ProfileComments";
-import ProfileActivity from "../components/ProfileActivity";
-import ProfileHeader from "../components/ProfileHeader";
-import Sidebar from "../../../components/sidebar/Sidebar";
+import ProfileAchievements from '../components/ProfileAchievements';
+import ProfileComments from '../components/ProfileComments';
+import ProfileActivity from '../components/ProfileActivity';
+import ProfileHeader from '../components/ProfileHeader';
+import Sidebar from '../../../components/sidebar/Sidebar';
 
 export default function ProfilePage() {
   return (

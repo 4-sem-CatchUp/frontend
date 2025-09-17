@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faOtter } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faOtter } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { faGithub } from '@fortawesome/free-brands-svg-icons';
+// import { faHouse } from '@fortawesome/free-solid-svg-icons';
+// import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
+// import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function GlobalHeader() {
   return (

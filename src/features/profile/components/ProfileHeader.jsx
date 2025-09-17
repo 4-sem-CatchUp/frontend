@@ -1,8 +1,13 @@
-import React from "react";
-import DefaultButton from "../../../components/ui/DefaultButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faMedal, faCircle, faGear, faComments } from "@fortawesome/free-solid-svg-icons";
-import Card from "../../../components/ui/Card";
+import DefaultButton from '../../../components/ui/DefaultButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faUser,
+  faMedal,
+  faCircle,
+  faGear,
+  faComments,
+} from '@fortawesome/free-solid-svg-icons';
+import Card from '../../../components/ui/Card';
 
 export default function ProfileHeader() {
   return (
@@ -28,8 +33,14 @@ export default function ProfileHeader() {
               className="inline-block ml-1 text-yellow-500"
             />
           </h1>
-          <DefaultButton text="Edit Profile" icon={<FontAwesomeIcon icon={faGear} size="xs"/>} />
-          <DefaultButton text="Message" icon={<FontAwesomeIcon icon={faComments} size="xs"/>} />
+          <DefaultButton
+            text="Edit Profile"
+            icon={<FontAwesomeIcon icon={faGear} size="xs" />}
+          />
+          <DefaultButton
+            text="Message"
+            icon={<FontAwesomeIcon icon={faComments} size="xs" />}
+          />
         </div>
       </section>
     </Card>
