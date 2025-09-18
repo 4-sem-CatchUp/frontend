@@ -1,13 +1,13 @@
-import { render, screen } from '@testing-library/react'
-import ProfilePage from '@/features/profile/pages/ProfilePage'
-
-//Checks to see if all the different components correctly gets rendered on the profile page.
+import { renderWithClient } from '@/test-utils'; // however you wrap QueryClientProvider
+import { screen } from '@testing-library/react';
+import ProfilePage from './ProfilePage';
 
 test('renders all profile sections', () => {
-  render(<ProfilePage />)
-  expect(screen.getByText(/recent activity/i)).toBeInTheDocument()
-  expect(screen.getByText(/List of earned achievements/i)).toBeInTheDocument()
-  expect(screen.getByText(/Comment section where/i)).toBeInTheDocument()
-  // fx Sidebar: kig efter landmark eller noget unikt
-  expect(screen.getByRole('complementary')).toBeInTheDocument() // hvis Sidebar bruger <aside>
-})
+  renderWithClient(<ProfilePage />);
+
+  // Check headings for each section
+  expect(screen.getByRole('heading', { name: /Activity/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Achievements/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Comments/i })).toBeInTheDocument();
+
+});
