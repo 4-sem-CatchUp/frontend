@@ -21,7 +21,7 @@ export default function ProfileAchievements() {
       {achievement?.map((a) => (
         <ul>
           <li key={a.id}>
-            {a.title}
+            <a href="/">{a.title}</a>
             <span className="text-xs text-gray-500"> ({a.date})</span>
           </li>
         </ul>
