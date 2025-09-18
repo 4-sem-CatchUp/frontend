@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from '../../../components/ui/Card';
 
+import { useParams } from 'react-router-dom';
+import { useCommentQuery } from '../api/useProfileQuery';
+
 /**
  * ProfileComments component
  *
@@ -14,10 +17,18 @@ import Card from '../../../components/ui/Card';
  */
 
 export default function ProfileComments() {
+  const { username } = useParams();
+  const { data: comment = [] } = useCommentQuery(username);
   return (
     <Card title="Comments">
-      Comment section where people can see previous comments made for the
-      profile, and and input where they can add their own comment.
+      <ul>
+        {comment.map((item) => (
+          <li key={item.id}>
+            {item.text}
+            <span className="text-xs text-gray-500"> ({item.date})</span>
+          </li>
+        ))}
+      </ul>
     </Card>
   );
 }

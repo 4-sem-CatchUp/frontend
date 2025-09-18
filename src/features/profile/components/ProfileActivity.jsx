@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from '../../../components/ui/Card';
 
+import { useParams } from 'react-router-dom';
+import { useActivityQuery } from '../api/useProfileQuery';
+
 /**
  * ProfileActivity component
  *
@@ -14,10 +17,18 @@ import Card from '../../../components/ui/Card';
  */
 
 export default function ProfileActivity() {
+  const { username } = useParams();
+  const { data: activity = [] } = useActivityQuery(username);
+
   return (
     <Card title="Activity">
-      Here the visitor can see recent activity of the user. Recent comments on
-      different subs, recent posts made etc.
+      <ul>
+        {activity.map((item) => (
+          <li key={item.id}>
+            {item.title} <span className="text-xs text-gray-500">({item.date} - {item.type})</span>
+          </li>
+        ))}
+      </ul>
     </Card>
   );
 }
