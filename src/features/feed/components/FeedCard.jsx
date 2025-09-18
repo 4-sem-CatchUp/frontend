@@ -26,6 +26,7 @@ export default function FeedCard({ postTitle, children }) {
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>Burak Gültekin</p>
           <p>/datamatiker-aarhus</p>
+          <p></p>
         </div>
 
         {/* Right side 70% */}
@@ -51,7 +52,7 @@ export default function FeedCard({ postTitle, children }) {
               </a>
             </div>
             <div className="flex">
-              <button className="bg-sky-500 p-3 rounded-sm">Læs mere</button>
+              <button className="">Læs mere</button>
             </div>
           </div>
         </div>
