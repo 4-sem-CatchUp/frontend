@@ -14,7 +14,7 @@ export default function FeedCard({
   commentCount,
   upvotes,
   downvotes,
-  children,
+  postContent,
   date,
 }) {
   return (
@@ -25,10 +25,10 @@ export default function FeedCard({
       </div>
 
       {/* Rest of card */}
-      <div className="mt-2 text-sm flex gap-4 md:gap-2 justify-center text-gray-900 dark:text-stone-50 p-3">
+      <div className="mt-2 text-sm flex gap-4 justify-start text-gray-900 dark:text-stone-50 p-3">
         {/* Left side 30% */}
-        <div className=" md:basis-1/12 shrink-0 justify-center">
-          <img className="rounded-full w-15 border-2 border-sky-500" src={profileImg} alt="" />
+        <div className="flex-none w-16">
+          <img className="rounded-full size-16 border-2 border-sky-500 object-cover" src={profileImg} alt="" />
         </div>
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>{profileName}</p>
@@ -39,9 +39,9 @@ export default function FeedCard({
         {/* Right side 70% */}
         <div className="flex-1 md:basis-8/12">
           {/* Nested left side */}
-          <div className="flex">
-            <img src={featuredImg} alt="" />
-            <p>{children}</p>
+          <div className="flex-col">
+            <img className="pb-3 w-1/2" src={featuredImg} alt="" />
+            <p>{postContent}</p>
           </div>
 
           {/* Nested right side */}

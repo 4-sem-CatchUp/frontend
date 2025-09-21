@@ -21,7 +21,7 @@ export default function FeedList() {
           commentCount={p.commentCount}
           upvotes={p.upvotes}
           downvotes={p.downvotes}
-          children={p.children}
+          postContent={p.postContent}
           date={p.date}
         />
       ))}
