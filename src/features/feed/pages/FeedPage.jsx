@@ -1,5 +1,6 @@
 import React from 'react';
-import FeedCard from '../components/FeedCard';
+import FeedFilter from '../components/FeedFilter';
+import FeedList from '../components/FeedCardList';
 
 export default function FeedPage() {
   return (
@@ -10,14 +11,10 @@ export default function FeedPage() {
         {/* MAIN GRID: 75 / 25 split on md+ */}
         <section className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* 75% column */}
+
           <div className="md:col-span-3 space-y-6">
-            <FeedCard postTitle={'Hej jeg er en titel'}>
-              Hej, jeg er et feedtekst. Jeg stinker af nums og tis.Hej, jeg er et feedtekst. Jeg stinker af nums og
-              tis.Hej, jeg er et feedtekst. Jeg stinker af nums og tis.Hej, jeg er et{' '}
-              <a className="highlight" href="/">
-                feedtekst.
-              </a>
-            </FeedCard>
+            <FeedFilter />
+            <FeedList />
           </div>
 
           {/* 25% sidebar */}

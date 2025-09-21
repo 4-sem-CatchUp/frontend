@@ -40,6 +40,14 @@ function createActivity() {
   ];
 }
 
+// Feed 
+function createFeed() {
+  return [
+    { id: 'p1', postTitle: 'Dark mode tips with Tailwind', profileImg: '/avatars/ava1.png', profileName: 'Lin', commentCount: 12, upvotes: 128, downvotes: 3, featuredImg: '/images/post1.jpg', date: '2024-09-02' },
+    { id: 'p2', postTitle: 'Why I switched to Vite', profileImg: '/avatars/ava2.png', profileName: 'Max', commentCount: 7, upvotes: 85, downvotes: 1, featuredImg: '/images/post2.jpg', date: '2024-09-04'},
+  ]
+}
+
 export const handlers = [
   // NOTE: exact same path shape the service calls:
   http.get('/api/profile/:username', ({ params }) => {
@@ -54,4 +62,9 @@ export const handlers = [
   http.get('/api/profile/:username/activity', ({ params }) => {
     return HttpResponse.json(createActivity(params.username));
   }),
+
+  http.get('/api/feed', () => {
+    return HttpResponse.json(createFeed())
+  }),
+
 ];
