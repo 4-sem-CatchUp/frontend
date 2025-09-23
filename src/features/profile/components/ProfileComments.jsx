@@ -25,7 +25,7 @@ export default function ProfileComments() {
         {comment.map((item) => (
           <li key={item.id}>
             {item.text}
-            <span className="text-xs text-gray-400"> ({item.date})</span>
+            <span className="text-xs text-gray-500"> ({item.date})</span>
           </li>
         ))}
       </ul>

@@ -25,10 +25,7 @@ export default function ProfileActivity() {
       <ul>
         {activity.map((item) => (
           <li key={item.id}>
-            {item.title}{' '}
-            <span className="text-xs text-gray-400">
-              ({item.date} - {item.type})
-            </span>
+            {item.title} <span className="text-xs text-gray-500">({item.date} - {item.type})</span>
           </li>
         ))}
       </ul>
