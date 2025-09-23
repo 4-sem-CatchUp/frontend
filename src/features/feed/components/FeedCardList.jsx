@@ -9,7 +9,7 @@ export default function FeedList() {
   if (isError) return <p className="p-4">Error: {String(error?.message || 'failed')}</p>;
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-4">
       {posts?.map((p) => (
         <FeedCard
           key={p.id}
