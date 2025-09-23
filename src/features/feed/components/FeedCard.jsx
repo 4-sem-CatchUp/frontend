@@ -19,10 +19,12 @@ export default function FeedCard({
   date,
 }) {
   return (
-    <div className="relative overflow-hidden rounded-sm border border-gray-900 dark:border-gray-300/25 dark:bg-gray-900 bg-stone-50 shadow-sm">
+    <div className="relative overflow-hidden rounded-sm border dark:border-gray-800 dark:bg-gray-900 bg-stone-50 border-gray-900 shadow-sm">
       {/* Top Heading */}
-      <div className="bg-gray-800 p-3 pt-2 pb-2">
-        <h2 className="text-sm font-semibold ">{postTitle}</h2>
+      <div className="bg-gray-800 shadow-sm p-3 pt-2 pb-2">
+        <h3 className="">
+          <Truncate length={45}>{postTitle}</Truncate>
+        </h3>
       </div>
 
       {/* Rest of card */}
@@ -34,7 +36,7 @@ export default function FeedCard({
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>{profileName}</p>
           <p>{sub}</p>
-          <p className="text-gray-400 pb-3 text-sm">{date}</p>
+          <p className="text-gray-500 dark:text-gray-400 pb-3 text-sm">{date}</p>
         </div>
 
         {/* Right side 70% */}

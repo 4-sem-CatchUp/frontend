@@ -22,7 +22,7 @@ export default function ProfileAchievements() {
         <ul>
           <li key={a.id}>
             <a href="/">{a.title}</a>
-            <span className="text-xs text-gray-500"> ({a.date})</span>
+            <span className="text-xs text-gray-400"> ({a.date})</span>
           </li>
         </ul>
       ))}
