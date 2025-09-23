@@ -19,7 +19,7 @@
     @apply text-sky-500 font-heading text-2xl font-semibold;
   }
   p {
-    @apply font-sans text-gray-900 dark:text-stone-50 sm:text-base md:text-lg leading-relaxed selection:bg-gray-900 selection:text-stone-50 dark:selection:bg-pink-400;
+    @apply font-sans text-gray-900 dark:text-stone-50 sm:text-base lg:text-lg leading-relaxed selection:bg-gray-900 selection:text-stone-50 dark:selection:bg-pink-400;
   }
   .highlight {
     @apply text-violet-500 dark:text-pink-400;

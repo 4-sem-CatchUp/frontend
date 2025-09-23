@@ -1,4 +1,5 @@
 import React from 'react';
+import Truncate from '../../../components/ui/Truncate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -33,15 +34,17 @@ export default function FeedCard({
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>{profileName}</p>
           <p>{sub}</p>
-          <p className="text-gray-400 text-sm">{date}</p>
+          <p className="text-gray-400 pb-3 text-sm">{date}</p>
         </div>
 
         {/* Right side 70% */}
         <div className="flex-1 md:basis-8/12">
           {/* Nested left side */}
-          <div className="flex-col">
-            <img className="pb-3 w-1/2" src={featuredImg} alt="" />
-            <p>{postContent}</p>
+          <div className="flex flex-col lg:flex-row gap-4 mb-4">
+            <img className="w-1/3 lg:w-1/4 h-full" src={featuredImg} alt="" />
+            <p>
+              <Truncate length={70}>{postContent}</Truncate>
+            </p>
           </div>
 
           {/* Nested right side */}
@@ -61,7 +64,7 @@ export default function FeedCard({
               </a>
             </div>
             <div className="flex">
-              <button className="">Læs mere</button>
+              <button className="mb-0">Læs mere</button>
             </div>
           </div>
         </div>
