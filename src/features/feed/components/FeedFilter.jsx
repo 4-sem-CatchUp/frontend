@@ -9,7 +9,7 @@ export default function FeedFilter({}) {
       <button
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
-        class=" outline text-center bg-transparent inline-flex items-center"
+        class=" outline text-center bg-transparent inline-flex items-center w-1/4 xl:w-1/8"
         type="button"
       >
         Sortér
@@ -22,12 +22,12 @@ export default function FeedFilter({}) {
         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
           <li>
             <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              Dashboard
+              Seneste
             </a>
           </li>
           <li>
             <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              Settings
+              Hot
             </a>
           </li>
           <li>
