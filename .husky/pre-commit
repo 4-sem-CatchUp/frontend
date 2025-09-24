@@ -1,2 +1,1 @@
-echo "🔍 Running lint-staged (lint + related tests)..."
 npx lint-staged

@@ -33,8 +33,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
+      "echo '🔍 Linting staged files...'",
       "eslint --fix",
-      "vitest related --run"
+      "echo '🧪 Running tests related to changed files...'",
+      "vitest related --run --reporter=verbose"
     ]
   },
   "devDependencies": {
