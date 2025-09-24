@@ -13,6 +13,7 @@ import { useAchievementQuery } from '../api/index';
  * with dynamic achievement data and progress indicators.
  */
 
+
 export default function ProfileAchievements() {
   const { username } = useParams<{ username: string }>();
   const { data: achievement } = useAchievementQuery(username!);

@@ -21,7 +21,7 @@ export interface CardProps {
   children: ReactNode;
 }
 
-export default function Card({ title, children, icon }: CardProps) {
+export default function Card({title, children, icon} : CardProps) {
   return (
     <div className="relative overflow-hidden rounded-sm border dark:border-gray-800 dark:bg-gray-900 bg-stone-50 shadow-sm">
       <div className="bg-gray-800 p-3 pt-2 pb-2 grid grid-cols-[auto_1fr] items-center gap-2">
