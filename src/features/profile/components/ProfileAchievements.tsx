@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../../../components/ui/Card';
 import { useParams } from 'react-router-dom';
-import { useAchievementQuery } from '../api/useProfileQuery';
+import { useAchievementQuery } from '../api/index';
+import { Achievement } from '@/types/types';
 
 /**
  * ProfileAchievements component
@@ -14,18 +15,17 @@ import { useAchievementQuery } from '../api/useProfileQuery';
  */
 
 export default function ProfileAchievements() {
-  const { username } = useParams();
-  const { data: achievement } = useAchievementQuery(username);
+  const { username } = useParams<{ username: string }>();
+  const { data: achievement } = useAchievementQuery(username!);
   return (
     <Card title="Achievements">
-      {achievement?.map((a) => (
-        <ul>
+      <ul>
+        {achievement?.map((a) => (
           <li key={a.id}>
-            <a href="/">{a.title}</a>
-            <span className="text-xs text-gray-500"> ({a.date})</span>
+            {a.title} <span className="text-xs text-gray-500"> ({a.date})</span>
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </Card>
   );
 }
