@@ -1,1 +1,2 @@
-npm run lint && npm run test
+echo "🔍 Running lint-staged (lint + related tests)..."
+npx lint-staged

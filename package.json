@@ -15,6 +15,7 @@
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
     "prepare": "husky"
+    
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1",
@@ -29,6 +30,12 @@
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.2",
     "tailwindcss": "^4.1.12"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "vitest related --run"
+    ]
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
@@ -52,6 +59,7 @@
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "jsdom": "^27.0.0",
+    "lint-staged": "^16.2.0",
     "msw": "^2.11.2",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
