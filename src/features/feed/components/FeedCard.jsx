@@ -22,7 +22,7 @@ export default function FeedCard({
   date,
 }) {
   return (
-    <div className="relative overflow-hidden rounded-sm border border-gray-900 dark:border-gray-300/25 dark:bg-gray-900 bg-stone-50 shadow-sm">
+    <div className="relative overflow-hidden rounded-sm border dark:border-gray-800 dark:bg-gray-900 bg-stone-50 border-gray-900 shadow-sm">
       {/* Top Heading */}
       <div className="bg-gray-800 p-3 pt-2 pb-2">
         <h2 className="text-sm font-semibold ">{postTitle}</h2>
@@ -43,9 +43,11 @@ export default function FeedCard({
         {/* Right side 70% */}
         <div className="flex-1 md:basis-8/12">
           {/* Nested left side */}
-          <div className="flex-col">
-            <img className="pb-3 w-1/2" src={featuredImg} alt="" />
-            <p>{postContent}</p>
+          <div className="flex flex-col lg:flex-row gap-4 mb-4">
+            <img className="w-1/3 lg:w-1/4 h-full" src={featuredImg} alt="" />
+            <p>
+              <Truncate length={70}>{postContent}</Truncate>
+            </p>
           </div>
 
           {/* Nested right side */}
@@ -65,9 +67,7 @@ export default function FeedCard({
               </a>
             </div>
             <div className="flex">
-
               <DefaultButton text="Læs mere" />
-
             </div>
           </div>
         </div>
