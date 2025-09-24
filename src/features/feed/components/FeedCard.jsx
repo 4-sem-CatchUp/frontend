@@ -1,4 +1,8 @@
 import React from 'react';
+
+import Truncate from '../../../components/ui/Truncate';
+import DefaultButton from '../../../components/ui/DefaultButton';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -61,7 +65,9 @@ export default function FeedCard({
               </a>
             </div>
             <div className="flex">
-              <button className="">Læs mere</button>
+
+              <DefaultButton text="Læs mere" />
+
             </div>
           </div>
         </div>
