@@ -1,1 +1,17 @@
-npx lint-staged
+echo "🔍 Running ESLint on staged files..."
+npx lint-staged --quiet
+
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint failed. Fix the issues above before committing."
+  exit 1
+fi
+
+echo "🧪 Running Vitest on changed files..."
+npx vitest related --run --reporter=verbose
+
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Fix the failing tests before committing."
+  exit 1
+fi
+
+echo "✅ All checks passed! Proceeding with commit..."
