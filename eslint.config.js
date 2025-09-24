@@ -28,7 +28,7 @@ import tseslint from 'typescript-eslint'
 export default defineConfig([
   globalIgnores(['dist', 'public/mockServiceWorker.js']),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,

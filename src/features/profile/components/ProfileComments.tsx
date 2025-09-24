@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../../../components/ui/Card';
 import { useParams } from 'react-router-dom';
 import { useCommentQuery } from '../api/index';
-import { Comment } from '@/types/types';
 
 /**
  * ProfileComments component

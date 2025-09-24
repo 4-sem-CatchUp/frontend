@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../../../components/ui/Card';
 import { useParams } from 'react-router-dom';
 import { useAchievementQuery } from '../api/index';
-import { Achievement } from '@/types/types';
 
 /**
  * ProfileAchievements component
@@ -13,6 +12,7 @@ import { Achievement } from '@/types/types';
  * Currently uses placeholder text, but can later be extended
  * with dynamic achievement data and progress indicators.
  */
+
 
 export default function ProfileAchievements() {
   const { username } = useParams<{ username: string }>();

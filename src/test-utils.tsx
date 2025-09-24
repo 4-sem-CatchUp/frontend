@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, RenderOptions } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import React, { ReactElement } from 'react';
 
 // Helper to wrap tested components in a QueryClientProvider
-export function renderWithClient(ui : ReactElement, options?: RenderOptions) {
+export function renderWithClient(ui : ReactElement) {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
