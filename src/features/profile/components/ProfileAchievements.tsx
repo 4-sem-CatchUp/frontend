@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../../../components/ui/Card';
 import { useParams } from 'react-router-dom';
 import { useAchievementQuery } from '../api/index';
-import { Achievement } from '@/types/types';
 
 /**
  * ProfileAchievements component

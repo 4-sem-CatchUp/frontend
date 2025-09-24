@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../../../components/ui/Card';
 import { useParams } from 'react-router-dom';
 import { useActivityQuery } from '../api/index';
-import { Activity } from '@/types/types';
 
 /**
  * ProfileActivity component
