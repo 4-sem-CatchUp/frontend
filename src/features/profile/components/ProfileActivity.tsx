@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from '../../../components/ui/Card';
-
 import { useParams } from 'react-router-dom';
-import { useActivityQuery } from '../api/useProfileQuery';
+import { useActivityQuery } from '../api/index';
+import { Activity } from '@/types/types';
 
 /**
  * ProfileActivity component
@@ -17,15 +17,20 @@ import { useActivityQuery } from '../api/useProfileQuery';
  */
 
 export default function ProfileActivity() {
-  const { username } = useParams();
-  const { data: activity = [] } = useActivityQuery(username);
+  const { username } = useParams<{ username: string }>();
+  const { data: activity } = useActivityQuery(username!);
 
   return (
     <Card title="Activity">
       <ul>
-        {activity.map((item) => (
-          <li key={item.id}>
-            {item.title} <span className="text-xs text-gray-500">({item.date} - {item.type})</span>
+        {activity?.map((a) => (
+          <li key={a.id}>
+            <a href="/" className="hover:text-sky-500">
+              {a.content}
+            </a>{' '}
+            <span className="text-xs text-gray-500">
+              ({a.date} - {a.type})
+            </span>
           </li>
         ))}
       </ul>

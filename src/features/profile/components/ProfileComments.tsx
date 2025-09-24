@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from '../../../components/ui/Card';
-
 import { useParams } from 'react-router-dom';
-import { useCommentQuery } from '../api/useProfileQuery';
+import { useCommentQuery } from '../api/index';
+import { Comment } from '@/types/types';
 
 /**
  * ProfileComments component
@@ -17,12 +17,12 @@ import { useCommentQuery } from '../api/useProfileQuery';
  */
 
 export default function ProfileComments() {
-  const { username } = useParams();
-  const { data: comment = [] } = useCommentQuery(username);
+  const { username } = useParams<{ username: string }>();
+  const { data: comment } = useCommentQuery(username!);
   return (
     <Card title="Comments">
       <ul>
-        {comment.map((item) => (
+        {comment?.map((item) => (
           <li key={item.id}>
             {item.text}
             <span className="text-xs text-gray-500"> ({item.date})</span>

@@ -1,5 +1,5 @@
 // vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +15,9 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
     },
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+  
   test: {
     globals: true,
     environment: 'jsdom',

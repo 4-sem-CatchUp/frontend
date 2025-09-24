@@ -34,9 +34,9 @@ function createComment() {
 
 function createActivity() {
   return [
-    { id: 201, type: 'post', title: 'My first post', date: '2024-09-01' },
-    { id: 202, type: 'comment', title: 'Interesting discussion about React', date: '2024-09-02' },
-    { id: 203, type: 'post', title: 'Another update from me', date: '2024-09-04' },
+    { id: 201, type: 'post', content: 'My first post', date: '2024-09-01' },
+    { id: 202, type: 'comment', content: 'Interesting discussion about React', date: '2024-09-02' },
+    { id: 203, type: 'post', content: 'Another update from me', date: '2024-09-04' },
   ];
 }
 

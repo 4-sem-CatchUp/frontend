@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-export default function FeedFilter({}) {
+export default function FeedFilter() {
   return (
     <div>
       {' '}

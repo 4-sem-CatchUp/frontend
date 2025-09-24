@@ -4,7 +4,7 @@ import ProfileAchievements from '../components/ProfileAchievements';
 import ProfileComments from '../components/ProfileComments';
 import ProfileActivity from '../components/ProfileActivity';
 import ProfileHeader from '../components/ProfileHeader';
-import Sidebar from '../../../components/sidebar/Sidebar';
+import Sidebar from '@/components/sidebar/Sidebar';
 
 /**
  * ProfilePage component
