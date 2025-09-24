@@ -6,8 +6,8 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "🧪 Running Vitest on changed files..."
-npx vitest related --run --reporter=verbose
+echo "🧪 Running full test suite"
+npx vitest run --reporter=verbose
 
 if [ $? -ne 0 ]; then
   echo "❌ Tests failed. Fix the failing tests before committing."
