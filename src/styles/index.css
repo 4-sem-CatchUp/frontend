@@ -10,28 +10,24 @@
     @apply bg-stone-50 dark:bg-gray-900;
   }
   h1 {
-    @apply text-sky-500 font-heading text-4xl font-bold;
+    @apply text-sky-500 font-heading text-3xl font-bold;
   }
   h2 {
-    @apply text-sky-500 font-heading text-3xl font-semibold;
-  }
-  h3 {
     @apply text-sky-500 font-heading text-2xl font-semibold;
   }
+  h3 {
+    @apply text-sky-500 font-heading text-lg lg:text-xl font-semibold;
+  }
   p {
-    @apply font-sans text-gray-900 dark:text-stone-50 sm:text-base md:text-lg leading-relaxed selection:bg-gray-900 selection:text-stone-50 dark:selection:bg-pink-400;
+    @apply font-sans text-gray-900 dark:text-stone-50 sm:text-base lg:text-lg leading-relaxed selection:bg-gray-900 selection:text-stone-50 dark:selection:bg-pink-400;
   }
   .highlight {
     @apply text-violet-500 dark:text-pink-400;
   }
 
   button {
-
     @apply bg-sky-500 text-stone-50 hover:bg-sky-600 font-heading sm:text-base me-2
     mb-2 rounded-sm py-3 px-5 cursor-pointer font-bold;
-
-    @apply bg-sky-500 text-stone-50 hover:bg-sky-600 rounded-sm py-3 px-5 cursor-pointer;
-
   }
 
   input {
