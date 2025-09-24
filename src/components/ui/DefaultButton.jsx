@@ -15,7 +15,7 @@ import React from 'react';
 
 export default function DefaultButton({ icon, text }) {
   return (
-    <button type="button" class="">
+    <button type="button" className="">
       {text}
       {icon}
     </button>

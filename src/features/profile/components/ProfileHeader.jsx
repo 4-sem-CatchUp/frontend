@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMedal, faCircle, faGear, faComments } from '@fortawesome/free-solid-svg-icons';
 import Card from '../../../components/ui/Card';
 
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import { useProfileQuery } from '../api/useProfileQuery';
 
 /**
@@ -21,17 +21,16 @@ import { useProfileQuery } from '../api/useProfileQuery';
  */
 
 export default function ProfileHeader() {
-
-  const { username } = useParams()
-  const { data: profile, status, error } = useProfileQuery(username)
+  const { username } = useParams();
+  const { data: profile, status, error } = useProfileQuery(username);
 
   if (status === 'pending') {
-    return <Card title="Fetching username...">Fetching user data…</Card>
+    return <Card title="Fetching username...">Fetching user data…</Card>;
   }
   if (status === 'error') {
-    return <p>Could not load profile: {error.message}</p>
+    return <p>Could not load profile: {error.message}</p>;
   }
-  if (!profile) return null
+  if (!profile) return null;
 
   return (
     <Card title={profile.name} icon={<FontAwesomeIcon icon={faCircle} size="xs" />}>
@@ -44,9 +43,7 @@ export default function ProfileHeader() {
           <FontAwesomeIcon icon={faUser} size="5x" />
         </div>
         <div className="md:col-span-4 space-y-6">
-          <p className="mt-2 text-sm text-gray-900 dark:text-stone-50">
-            Bio section for {profile.name}
-          </p>
+          <p className="mt-2 text-sm text-gray-900 dark:text-stone-50">Bio section for {profile.name}</p>
         </div>
         <div className="md:col-span-1 space-y-3">
           <h1 className="text-xl md:text-2xl font-semibold">
