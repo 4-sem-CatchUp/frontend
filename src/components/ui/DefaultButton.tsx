@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ReactNode } from 'react';
 
 /**
  * DefaultButton component
@@ -12,10 +13,14 @@ import React from 'react';
  * - Tailwind classes for size, colors, hover/focus states, and dark mode
  * - Full-width layout with rounded corners and bold heading font
  */
+interface DefaultButtonProps {
+  icon?: ReactNode;
+  text?: string;
+}
 
-export default function DefaultButton({ icon, text }) {
+export default function DefaultButton({ icon, text }: DefaultButtonProps) {
   return (
-    <button type="button" className="">
+    <button type="button">
       {text}
       {icon}
     </button>
