@@ -1,7 +1,7 @@
 // src/mocks/handlers.js
 import { http, HttpResponse } from 'msw';
 
-function createProfile(username) {
+function createProfile(username: string) {
   return {
     username,
     name: username.charAt(0).toUpperCase() + username.slice(1),
@@ -54,17 +54,17 @@ function createFeed() {
 
 export const handlers = [
   // NOTE: exact same path shape the service calls:
-  http.get('/api/profile/:username', ({ params }) => {
+  http.get<{username: string}>('/api/profile/:username', ({ params }) => {
     return HttpResponse.json(createProfile(params.username));
   }),
-  http.get('/api/profile/:username/achievement', ({ params }) => {
-    return HttpResponse.json(createAchievement(params.username));
+  http.get<{username: string}>('/api/profile/:username/achievement', () => {
+    return HttpResponse.json(createAchievement());
   }),
-  http.get('/api/profile/:username/comment', ({ params }) => {
-    return HttpResponse.json(createComment(params.username));
+  http.get('/api/profile/:username/comment', () => {
+    return HttpResponse.json(createComment());
   }),
-  http.get('/api/profile/:username/activity', ({ params }) => {
-    return HttpResponse.json(createActivity(params.username));
+  http.get('/api/profile/:username/activity', () => {
+    return HttpResponse.json(createActivity());
   }),
 
   http.get('/api/feed', () => {

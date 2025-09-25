@@ -53,7 +53,7 @@ export default function GlobalHeader() {
 
           {/* Desktop - search input */}
           <div className="relative hidden md:block">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
                 viewBox="0 0 20 20"
@@ -72,7 +72,7 @@ export default function GlobalHeader() {
             aria-controls="navbar-search"
             aria-expanded="false"
           >
-            <span class="sr-only">Open main menu</span>
+            <span className="sr-only">Open main menu</span>
             <FontAwesomeIcon
               icon={faBars}
               aria-hidden="true"

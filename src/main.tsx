@@ -25,7 +25,7 @@ if (import.meta.env.DEV) {
  * Root element: <div id="root"></div> in index.html
  */
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
