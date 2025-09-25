@@ -4,13 +4,13 @@ import FeedCard from './FeedCard';
 
 export default function FeedList() {
   const { data: posts = [], isLoading, isError, error } = useFeed();
-
+   
   if (isLoading) return <p className="p-4">Loading…</p>;
   if (isError) return <p className="p-4">Error: {String(error?.message || 'failed')}</p>;
 
   return (
     <div className="grid gap-6">
-      {posts?.map((p) => (
+      {posts?.map((p: any) => (
         <FeedCard
           key={p.id}
           postTitle={p.postTitle}

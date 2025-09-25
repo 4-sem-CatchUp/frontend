@@ -1,5 +1,5 @@
 import React from 'react';
-
+import type {ReactNode} from 'react';
 import Truncate from '../../../components/ui/Truncate';
 import DefaultButton from '../../../components/ui/DefaultButton';
 
@@ -9,6 +9,26 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
+export interface FeedCardProps {
+  postTitle?: string; 
+  profileImg?: string; 
+  featuredImg?: string; 
+  profileName?: string;
+  sub?: string;
+  commentCount?: number;
+  upvotes?: number; 
+  downvotes?: number;
+  postContent?: string;
+  date?: ReactNode;
+}
+
+/**
+ * Render a feed/post card showing title, author info, a content preview, and action counts.
+ *
+ * @param postContent - The post text shown in the card; content is truncated to 70 characters for the preview.
+ * @param date - Display value for the post's date (may be a string or React node).
+ * @returns The JSX element for the feed card component.
+ */
 export default function FeedCard({
   postTitle,
   profileImg,
@@ -20,12 +40,12 @@ export default function FeedCard({
   downvotes,
   postContent,
   date,
-}) {
+}:FeedCardProps) {
   return (
     <div className="relative overflow-hidden rounded-sm border dark:border-gray-800 dark:bg-gray-900 bg-stone-50 border-gray-900 shadow-sm">
       {/* Top Heading */}
       <div className="bg-gray-800 p-3 pt-2 pb-2">
-        <h2 className="text-sm font-semibold ">{postTitle}</h2>
+        <h3>{postTitle}</h3>
       </div>
 
       {/* Rest of card */}
@@ -37,7 +57,7 @@ export default function FeedCard({
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>{profileName}</p>
           <p>{sub}</p>
-          <p className="text-gray-400 text-sm">{date}</p>
+          <p className="text-gray-500 dark:text-gray-400 text-sm">{date}</p>
         </div>
 
         {/* Right side 70% */}

@@ -22,7 +22,7 @@ export default function ProfileAchievements() {
       <ul>
         {achievement?.map((a) => (
           <li key={a.id}>
-            {a.title} <span className="text-xs text-gray-500"> ({a.date})</span>
+            {a.title} <span className="text-xs text-gray-500 dark:text-gray-400"> ({a.date})</span>
           </li>
         ))}
       </ul>
