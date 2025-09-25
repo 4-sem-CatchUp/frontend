@@ -8,17 +8,12 @@ import { useProfileQuery } from '../api/index';
 import { Profile } from '@/types/types';
 
 /**
- * ProfileHeader component
+ * Render the top section of a user's profile.
  *
- * Displays the top section of a user’s profile.
- * Includes:
- * - User avatar placeholder (large icon)
- * - Quick bio text
- * - Rank with medal icon
- * - Action buttons (Edit Profile, Message)
+ * Displays the profile name, an avatar placeholder, a short bio, and the user's rank.
+ * While profile data is loading it renders a Card indicating progress; on fetch error it renders an error paragraph.
  *
- * Wrapped in a Card component for consistent styling.
- * Responsive layout: grid adapts between single and multi-column.
+ * @returns A JSX element containing the profile header, a loading Card, an error message paragraph, or `null` when no profile data is available.
  */
 
 export default function ProfileHeader() {
