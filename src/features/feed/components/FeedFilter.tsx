@@ -1,21 +1,26 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faFilter } from '@fortawesome/free-solid-svg-icons';
+import DefaultButton from '@/components/ui/DefaultButton';
 
 export default function FeedFilter() {
   return (
     <div>
+      <div className='flex'>
       {' '}
-      <button
-        id="dropdownDefaultButton"
+      <DefaultButton 
+      icon={<FontAwesomeIcon icon={faCaretDown} />}
+      id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
-        className="outline text-center bg-transparent inline-flex items-center"
-        //class=" outline text-center bg-transparent inline-flex items-center w-1/4 xl:w-1/8"
-        type="button"
-      >
-        Sortér
-        <FontAwesomeIcon icon={faCaretDown} />
-      </button>
+        className="text-center dark:bg-gray-800 text-sky-500  hover:text-sky-600 dark:bg- inline-flex items-center w-1/2 "
+        type="button" text='Sort'/>
+        <DefaultButton 
+      icon={<FontAwesomeIcon icon={faFilter} />}
+      id="dropdownDefaultButton"
+        data-dropdown-toggle="dropdown"
+        className="text-center dark:bg-gray-800 text-sky-500  hover:text-sky-600 dark:bg- inline-flex items-center w-1/2 "
+        type="button" text='Filter'/>
+</div>
       <div
         id="dropdown"
         className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"

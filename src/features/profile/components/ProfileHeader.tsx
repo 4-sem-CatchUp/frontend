@@ -37,13 +37,13 @@ export default function ProfileHeader() {
           <FontAwesomeIcon icon={faUser} size="5x" />
         </div>
         <div className="md:col-span-4 space-y-6">
-          <p className="mt-2 text-sm text-gray-900 dark:text-stone-50">Bio section for {profile.name}</p>
+          <p className="mt-2">Bio section for {profile.name}</p>
         </div>
         <div className="md:col-span-1 space-y-3">
-          <h1 className="text-xl md:text-2xl font-semibold">
+          <h2 className="">
             Rank {profile.rank}
             <FontAwesomeIcon icon={faMedal} className="inline-block ml-1 text-yellow-500" />
-          </h1>
+          </h2>
           {/* <DefaultButton text="Edit Profile" icon={<FontAwesomeIcon icon={faGear} size="xs" />} />
           <DefaultButton text="Message" icon={<FontAwesomeIcon icon={faComments} size="xs" />} /> */}
         </div>

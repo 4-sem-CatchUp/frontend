@@ -24,10 +24,10 @@ export default function ProfileActivity() {
       <ul>
         {activity?.map((a) => (
           <li key={a.id}>
-            <a href="/" className="hover:text-sky-500">
+            <a href="/" className="hover:text-sky-500 transition">
               {a.content}
             </a>{' '}
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400">
               ({a.date} - {a.type})
             </span>
           </li>
