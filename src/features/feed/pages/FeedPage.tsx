@@ -1,6 +1,7 @@
 import React from 'react';
 import FeedFilter from '../components/FeedFilter';
 import FeedList from '../components/FeedCardList';
+import Sidebar from '@/components/sidebar/Sidebar';
 
 export default function FeedPage() {
   return (
@@ -18,7 +19,7 @@ export default function FeedPage() {
           </div>
 
           {/* 25% sidebar */}
-          <aside className="md:col-span-1"></aside>
+          <aside className="md:col-span-1"><Sidebar /></aside>
         </section>
       </div>
     </main>

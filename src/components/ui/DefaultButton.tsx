@@ -14,8 +14,11 @@ import type { ReactNode } from 'react';
  * - Full-width layout with rounded corners and bold heading font
  */
 interface DefaultButtonProps {
+  id?: string;
   icon?: ReactNode;
   text?: string;
+  className?: string;
+  type?: any;
 }
 
 /**
@@ -25,9 +28,9 @@ interface DefaultButtonProps {
  * @param text - Optional label rendered before the icon inside the button
  * @returns A JSX `button` element containing `text` followed by `icon`
  */
-export default function DefaultButton({ icon, text }: DefaultButtonProps) {
+export default function DefaultButton({ icon, text, id, className, type = "button" }: DefaultButtonProps) {
   return (
-    <button type="button">
+    <button type={type} className={className} id={id}>
       {text}
       {icon}
     </button>

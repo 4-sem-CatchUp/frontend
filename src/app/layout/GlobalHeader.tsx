@@ -104,29 +104,29 @@ export default function GlobalHeader() {
           <ul className="flex flex-col text-sm xl:text-md p-4 md:p-0 mt-4 mr-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <a
-                href="#"
+                href="/"
                 className="block py-2 px-3 sm:text-base md:text-lg text-gray-900 rounded-sm md:bg-transparent md:p-0 dark:text-stone-50  md:hover:text-sky-500 dark:md:hover:text-sky-500  aria-[current=page]:text-sky-500"
                 aria-current="page"
               >
-                <FontAwesomeIcon icon={faHouse} className="sm:text-base md:text-lg" />
+                <FontAwesomeIcon icon={faHouse} className="sm:text-base md:text-lg transition" />
                 Feed
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="/subs"
                 className="block py-2 px-3 sm:text-base md:text-lg text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent   md:hover:text-sky-500 md:p-0 md:dark:hover:text-sky-500 dark:text-stone-50 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 aria-[current=page]:text-sky-500"
               >
-                <FontAwesomeIcon icon={faPeopleGroup} className="sm:text-base md:text-lg" />
+                <FontAwesomeIcon icon={faPeopleGroup} className="sm:text-base md:text-lg transition" />
                 Subs
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="/"
                 className="block py-2 px-3 sm:text-base md:text-lg text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent   md:hover:text-sky-500 md:p-0 dark:text-stone-50 md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 aria-[current=page]:text-sky-500"
               >
-                <FontAwesomeIcon icon={faUser} className="sm:text-base md:text-lg" />
+                <FontAwesomeIcon icon={faUser} className="sm:text-base md:text-lg transition" />
                 Profile
               </a>
             </li>
