@@ -10,7 +10,7 @@ export default function FeedFilter() {
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
         className="outline text-center bg-transparent inline-flex items-center"
-        class=" outline text-center bg-transparent inline-flex items-center w-1/4 xl:w-1/8"
+        //class=" outline text-center bg-transparent inline-flex items-center w-1/4 xl:w-1/8"
         type="button"
       >
         Sortér
@@ -30,12 +30,12 @@ export default function FeedFilter() {
             <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Hot
             </a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Dashboard
             </a>
           </li>
           <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Settings
             </a>
           </li>
