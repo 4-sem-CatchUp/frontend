@@ -22,6 +22,13 @@ export interface FeedCardProps {
   date?: ReactNode;
 }
 
+/**
+ * Render a feed/post card showing title, author info, a content preview, and action counts.
+ *
+ * @param postContent - The post text shown in the card; content is truncated to 70 characters for the preview.
+ * @param date - Display value for the post's date (may be a string or React node).
+ * @returns The JSX element for the feed card component.
+ */
 export default function FeedCard({
   postTitle,
   profileImg,
