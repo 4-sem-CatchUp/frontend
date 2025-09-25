@@ -5,7 +5,7 @@ import { useActivityQuery } from '../api/index';
 
 /**
  * ProfileActivity component
- *
+ * 
  * Shows a user’s recent activity inside a Card.
  * Includes examples such as:
  * - Recent comments across different subs
