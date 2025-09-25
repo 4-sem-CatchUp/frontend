@@ -18,6 +18,13 @@ interface DefaultButtonProps {
   text?: string;
 }
 
+/**
+ * Renders a button displaying text followed by an icon.
+ *
+ * @param icon - Optional node rendered after the text inside the button
+ * @param text - Optional label rendered before the icon inside the button
+ * @returns A JSX `button` element containing `text` followed by `icon`
+ */
 export default function DefaultButton({ icon, text }: DefaultButtonProps) {
   return (
     <button type="button">
