@@ -10,7 +10,7 @@ export default function FeedList() {
 
   return (
     <div className="grid gap-6">
-      {posts?.map((p) => (
+      {posts?.map((p: any) => (
         <FeedCard
           key={p.id}
           postTitle={p.postTitle}
