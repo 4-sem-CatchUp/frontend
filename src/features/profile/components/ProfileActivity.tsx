@@ -6,7 +6,7 @@ import { Activity } from '@/types/types';
 
 /**
  * ProfileActivity component
- * sd
+ * 
  * Shows a user’s recent activity inside a Card.
  * Includes examples such as:
  * - Recent comments across different subs
