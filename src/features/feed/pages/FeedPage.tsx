@@ -1,6 +1,6 @@
 import React from 'react';
-import FeedFilter from '../components/FeedFilter';
-import FeedList from '../components/FeedCardList';
+import FeedFilter, {} from '../components/FeedFilter';
+import FeedCardList from '../components/FeedCardList';
 import Sidebar from '@/components/sidebar/Sidebar';
 
 export default function FeedPage() {
@@ -14,8 +14,8 @@ export default function FeedPage() {
           {/* 75% column */}
 
           <div className="md:col-span-3 space-y-6">
-            <FeedFilter />
-            <FeedList />
+            
+            <FeedCardList />
           </div>
 
           {/* 25% sidebar */}
