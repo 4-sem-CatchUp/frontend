@@ -1,5 +1,4 @@
-import React from 'react';
-import type { ReactNode } from 'react';
+import React, {ButtonHTMLAttributes, ReactNode} from 'react';
 
 /**
  * DefaultButton component
@@ -13,12 +12,16 @@ import type { ReactNode } from 'react';
  * - Tailwind classes for size, colors, hover/focus states, and dark mode
  * - Full-width layout with rounded corners and bold heading font
  */
-interface DefaultButtonProps {
+interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   id?: string;
   icon?: ReactNode;
+  iconPosition?: 'left' | 'right';
+  gapClass?: string;
   text?: string;
   className?: string;
   type?: any;
+  onClick?: any;
+  role?: any;
 }
 
 /**
@@ -28,11 +31,12 @@ interface DefaultButtonProps {
  * @param text - Optional label rendered before the icon inside the button
  * @returns A JSX `button` element containing `text` followed by `icon`
  */
-export default function DefaultButton({ icon, text, id, className, type = "button" }: DefaultButtonProps) {
+export default function DefaultButton({ icon, text, iconPosition='right', gapClass='gap-1', id, onClick, className, role, type = "button" }: DefaultButtonProps) {
   return (
-    <button type={type} className={className} id={id}>
+    <button type={type} className={`inline-flex items-start ${gapClass} ${className}`} onClick={onClick} id={id} role={role}>
+      {icon && iconPosition === 'left' && <span aria-hidden="true">{icon}</span>}
       {text}
-      {icon}
+      {icon && iconPosition === 'right' && <span aria-hidden="true">{icon}</span>}
     </button>
   );
 }
