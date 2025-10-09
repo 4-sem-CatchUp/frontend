@@ -50,9 +50,15 @@ function sortPosts(posts: Post[], sortBy: SortOption): Post[] {
   }
 }
 
+function filterBySubs(posts: Post[], selectedSubs?: Set<string>): Post[] {
+  if (!selectedSubs) return posts;
+  if (selectedSubs.size === 0) return [];
+  return posts.filter((p) => selectedSubs.has(p.sub ?? '(no-sub)'));
+}
+
 export interface UseFeedPostsResult {
-  posts: Post[]; // sorted
-  rawPosts: Post[]; // unsorted
+  posts: Post[]; // filtered + sorted
+  rawPosts: Post[]; // unsorted and unfiltered
   sortBy: SortOption;
   setSortBy: (v: SortOption) => void;
   isLoading: boolean;
@@ -60,19 +66,14 @@ export interface UseFeedPostsResult {
   error: unknown;
 }
 
-export function useFeedPosts(): UseFeedPostsResult {
+export function useFeedPosts(selectedSubs?: Set<string>): UseFeedPostsResult {
   const { data = [], isLoading, isError, error } = useFeed();
   const [sortBy, setSortBy] = useState<SortOption>('newest');
 
-  const posts = useMemo(() => sortPosts(data, sortBy), [data, sortBy]);
+  const posts = useMemo(() => {
+    const filtered = filterBySubs(data, selectedSubs);
+    return sortPosts(filtered, sortBy);
+  }, [data, selectedSubs, sortBy]);
 
-  return {
-    posts,
-    rawPosts: data,
-    sortBy,
-    setSortBy,
-    isLoading,
-    isError,
-    error,
-  };
+  return { posts, rawPosts: data, sortBy, setSortBy, isLoading, isError, error };
 }
