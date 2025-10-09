@@ -1,5 +1,5 @@
 import React from 'react';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Truncate from '../../../components/ui/Truncate';
 import DefaultButton from '../../../components/ui/DefaultButton';
 
@@ -10,16 +10,16 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
 export interface FeedCardProps {
-  postTitle?: string; 
-  profileImg?: string; 
-  featuredImg?: string; 
-  profileName?: string;
-  sub?: string;
-  commentCount?: number;
-  upvotes?: number; 
-  downvotes?: number;
-  postContent?: string;
-  date?: ReactNode;
+  postTitle?: string | undefined;
+  profileImg?: string | undefined;
+  featuredImg?: string | undefined;
+  profileName?: string | undefined;
+  sub?: string | undefined;
+  commentCount?: number | undefined;
+  upvotes?: number | undefined;
+  downvotes?: number | undefined;
+  postContent?: string | undefined;
+  date?: string | Date | undefined;
 }
 
 /**
@@ -40,7 +40,11 @@ export default function FeedCard({
   downvotes,
   postContent,
   date,
-}:FeedCardProps) {
+}: FeedCardProps) {
+  const dateObj = typeof date === 'string' ? new Date(date) : date instanceof Date ? date : undefined;
+  const isValid = !!dateObj && !Number.isNaN(dateObj.getTime());
+  const dateLabel = isValid ? dateObj!.toLocaleDateString() : undefined;
+  const dateISO = isValid ? dateObj!.toISOString() : undefined;
   return (
     <div className="relative overflow-hidden rounded-sm border dark:border-gray-800 dark:bg-gray-900 bg-stone-50 border-gray-900 shadow-sm">
       {/* Top Heading */}
@@ -57,7 +61,11 @@ export default function FeedCard({
         <div className="flex-col md:flex-none  md:basis-3/12">
           <p>{profileName}</p>
           <p>{sub}</p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">{date}</p>
+          {isValid && (
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              <time dateTime={dateISO}>{dateLabel}</time>
+            </p>
+          )}
         </div>
 
         {/* Right side 70% */}
