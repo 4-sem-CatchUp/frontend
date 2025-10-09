@@ -1,12 +1,14 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
+import NoHeaderLayout from './layout/NoHeaderLayout';
 
 // Use alias OR relative; both shown work.
 // Using alias (requires vite.config.js alias + server restart):
 import { FeedPage } from '@/features/feed';
 import { PostPage } from '@/features/post';
 import { ProfilePage } from '@/features/profile';
+import { LoginPage } from '@/features/login';
 
 /**
  * Application router
@@ -23,6 +25,7 @@ import { ProfilePage } from '@/features/profile';
  */
 
 export const router = createBrowserRouter([
+  // Routes WITH global header
   {
     path: '/',
     element: <AppLayout />,
@@ -31,5 +34,11 @@ export const router = createBrowserRouter([
       { path: 'post/:id', element: <PostPage /> },
       { path: 'profile/:username', element: <ProfilePage /> },
     ],
+  },
+  // Routes WITHOUT global header
+  {
+    path: '/',
+    element: <NoHeaderLayout />,
+    children: [{ path: 'login', element: <LoginPage /> }],
   },
 ]);
