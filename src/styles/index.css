@@ -33,4 +33,20 @@
   input {
     @apply accent-sky-500 p-2 ps-10 sm:text-base md:text-lg outline-none text-gray-900 border-[0.5px] border-gray-950 dark:border-gray-300/25  rounded-sm bg-gray-50 focus:border-sky-500 dark:bg-gray-800  placeholder:text-gray-900 md:placeholder:text-lg sm:placeholder:text-base dark:placeholder-gray-400 dark:text-stone-50 dark:focus:border-blue-500;
   }
+
+  label {
+    @apply text-gray-900 dark:text-stone-50;
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply mx-auto max-w-3xl px-4 sm:px-6 lg:px-8;
+  }
+  .container-medium {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
 }
